@@ -16,7 +16,7 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #333;
-    background: linear-gradient(135deg, #fefae0, #d4f1f4);
+    background: linear-gradient(135deg, #abdf5d, #d4f1f4);
 }
 
 /* ===========================
@@ -83,7 +83,7 @@ nav a.active {
     #navMenu {
         display: none;
         flex-direction: column;
-        background: linear-gradient(180deg, #81C784, #4fc3f7);
+        background: linear-gradient(180deg, #66ea6c, #4fc3f7);
         position: absolute;
         top: 70px;
         right: 0;
