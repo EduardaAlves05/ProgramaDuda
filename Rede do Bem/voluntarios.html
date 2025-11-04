@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Painel de Voluntários — Rede do Bem</title>
+  <meta name="description" content="Painel que lista os voluntários cadastrados. Exporte e gerencie inscrições." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">🌻 Rede do Bem</div>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="navMenu" onclick="toggleMenu()">☰</button>
+      <ul id="navMenu">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="projeto.html">Projetos</a></li>
+        <li><a href="cadastro.html">Seja Voluntário</a></li>
+        <li><a href="mural.html">Mural</a></li>
+        <li><a href="voluntarios.html" class="active">Painel</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero-page">
+      <h1>Painel de Voluntários</h1>
+      <p>Veja, exporte e gerencie os cadastros recebidos (dados locais do navegador).</p>
+    </section>
+
+    <section class="signup-section" style="max-width:1100px;margin:2rem auto;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;">
+        <h2>Cadastros Recebidos</h2>
+        <div>
+          <button class="btn-secondary" onclick="exportVolunteersCSV()">Exportar CSV</button>
+          <button class="btn-primary" onclick="clearAllVolunteers()">Limpar Tudo</button>
+        </div>
+      </div>
+
+      <div id="tabelaVoluntarios" aria-live="polite">
+        <!-- será preenchido pelo script -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Rede do Bem. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

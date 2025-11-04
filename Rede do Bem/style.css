@@ -1,0 +1,120 @@
+/* ===============================
+   style.css - Rede do Bem (Final)
+   =============================== */
+
+* { margin:0; padding:0; box-sizing:border-box; }
+:root{
+  --bg-start:#fefae0;
+  --bg-end:#d4f1f4;
+  --primary1:#4fc3f7;
+  --primary2:#81C784;
+  --accent1:#667eea;
+  --accent2:#764ba2;
+  --text:#333;
+}
+
+body{
+  font-family: Arial, sans-serif;
+  color:var(--text);
+  background: linear-gradient(135deg, var(--bg-start), var(--bg-end));
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  min-height:100vh;
+}
+
+a{ color:inherit; text-decoration:none; }
+.visually-hidden{ position:absolute !important; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden; }
+
+/* Header / Nav */
+header{
+  position:fixed; top:0; left:0; right:0;
+  background: linear-gradient(90deg, var(--primary2), var(--primary1));
+  z-index:1000; box-shadow:0 2px 10px rgba(0,0,0,0.08);
+}
+nav{ max-width:1200px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; padding:1rem; }
+.logo{ font-size:1.6rem; color:#fff; font-weight:700; text-shadow:1px 1px 4px rgba(0,0,0,0.25); }
+nav ul{ display:flex; gap:1rem; list-style:none; align-items:center; }
+nav a{ color:#fff; padding:0.4rem 0.6rem; border-radius:6px; transition:transform .15s, background .15s; font-weight:600; }
+nav a:hover, nav a.active{ transform:scale(1.05); background: rgba(255,255,255,0.06); }
+
+/* Mobile menu */
+.menu-toggle{ background:none; border:none; color:#fff; font-size:1.6rem; display:none; cursor:pointer; }
+@media(max-width:768px){
+  .menu-toggle{ display:block; }
+  #navMenu{ display:none; position:absolute; right:0; top:60px; width:100%; flex-direction:column; padding:1rem 0; gap:0; }
+  #navMenu.active{ display:flex; animation:fadeInDown .35s ease; background: linear-gradient(180deg, var(--primary2), var(--primary1)); }
+  nav ul{ gap:0; flex-direction:column; }
+  nav a{ padding:0.8rem 1.2rem; width:100%; }
+}
+
+/* Hero sections */
+.hero, .hero-page, .hero-cadastro{
+  display:flex; align-items:center; justify-content:space-between; gap:2rem; padding:6rem 2rem 4rem; margin-top:70px;
+}
+.hero{ background:linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.2)); }
+.hero-content{ max-width:720px; }
+.hero h1, .hero-page h1, .hero-cadastro h1{ font-size:2.6rem; margin-bottom:.6rem; color:#1b5e20; animation:fadeInUp .9s ease; }
+.hero p, .hero-page p, .hero-cadastro p{ font-size:1.15rem; margin-bottom:1rem; color:#2e7d32; }
+
+/* Buttons */
+.btn-primary, .btn-secondary{
+  display:inline-block; padding:0.9rem 1.6rem; border-radius:40px; font-weight:700; cursor:pointer; border:none;
+}
+.btn-primary{ background:linear-gradient(90deg,var(--primary1),var(--primary2)); color:#fff; box-shadow:0 6px 18px rgba(0,0,0,0.12); }
+.btn-secondary{ background:linear-gradient(90deg,var(--accent1),var(--accent2)); color:#fff; box-shadow:0 6px 18px rgba(0,0,0,0.12); }
+.btn-primary:hover, .btn-secondary:hover{ transform:translateY(-4px); box-shadow:0 10px 26px rgba(0,0,0,0.18); }
+
+/* About & Highlights */
+.about{ text-align:center; padding:3.5rem 2rem; background:#ffffffcc; border-top:1px solid rgba(0,0,0,0.02); }
+.about img{ width:320px; border-radius:16px; box-shadow:0 6px 20px rgba(0,0,0,0.06); transition:transform .35s; }
+.about img:hover{ transform:scale(1.03); }
+.highlights{ padding:2rem; }
+.highlights-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1rem; margin-top:1rem; }
+
+/* Signup / Form */
+.signup-section{ max-width:880px; margin:2rem auto; background:#ffffffc7; padding:1.6rem; border-radius:16px; box-shadow:0 10px 30px rgba(0,0,0,0.06);}
+.signup-section h2{ text-align:center; color:#1565c0; margin-bottom:1rem; }
+form fieldset{ border:2px solid var(--primary1); border-radius:12px; padding:1rem; margin-bottom:1rem; transition:all .18s; background:rgba(255,255,255,0.6); }
+form fieldset:hover{ border-color:var(--primary2); box-shadow:0 6px 18px rgba(129,199,132,0.12); }
+legend{ padding:0.3rem 0.6rem; border-radius:12px; background:#e8f5e9; color:#2e7d32; font-weight:700; }
+.form-group{ margin-bottom:0.8rem; }
+label{ display:block; margin-bottom:0.4rem; font-weight:600; color:#222; }
+input, select, textarea{ width:100%; padding:.7rem; border-radius:8px; border:1px solid #cfcfcf; font-size:1rem; }
+input:focus, select:focus, textarea:focus{ box-shadow:0 6px 18px rgba(79,195,247,0.18); outline:none; border-color:var(--primary1); }
+
+/* Messages */
+.success-message{ display:none; background:#e8f5e9; color:#1b5e20; padding:.8rem; border-radius:8px; margin-bottom:1rem; font-weight:700; }
+.success-message.Show{ display:block; }
+
+/* Projects */
+.projects-container{ display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:1.2rem; max-width:1200px; margin:2rem auto; padding:0 1rem;}
+.project-card{ background:#ffffffc0; border-radius:12px; overflow:hidden; box-shadow:0 6px 20px rgba(0,0,0,0.06); transition:transform .25s, box-shadow .25s; }
+.project-card:hover{ transform:translateY(-6px); box-shadow:0 14px 36px rgba(0,0,0,0.12); }
+.project-card img{ width:100%; height:180px; object-fit:cover; display:block; }
+.card-content{ padding:1rem; }
+.project-card h3{ color:#1565c0; margin-bottom:.5rem; }
+
+/* Table (admin) */
+.vol-table{ width:100%; border-collapse:collapse; margin-top:1rem; }
+.vol-table th, .vol-table td{ padding:.6rem .8rem; border-bottom:1px solid rgba(0,0,0,0.06); text-align:left; font-size:.95rem; }
+.vol-table thead th{ background:rgba(0,0,0,0.03); font-weight:700; }
+
+/* Modal */
+.modal{ display:none; position:fixed; inset:0; background:rgba(0,0,0,0.5); align-items:center; justify-content:center; padding:1rem; z-index:1500; }
+.modal[aria-hidden="false"]{ display:flex; }
+.modal-content{ background:white; max-width:900px; width:100%; border-radius:12px; padding:1rem; position:relative; }
+.modal-close{ position:absolute; right:12px; top:8px; background:none; border:none; font-size:1.6rem; cursor:pointer; }
+
+/* Footer */
+footer{ text-align:center; padding:2rem; margin-top:2rem; background: linear-gradient(90deg,var(--primary1),var(--primary2)); color:white; }
+
+/* Small screens */
+@media(max-width:900px){
+  .hero, .hero-page, .hero-cadastro{ flex-direction:column; text-align:center; }
+  .hero-image{ order:2; margin-top:1rem; }
+  .hero-image img{ width:90%; max-width:420px; }
+}
+
+/* Animations */
+@keyframes fadeInUp{ from{opacity:0; transform:translateY(18px);} to{opacity:1; transform:translateY(0);} }
+@keyframes fadeInDown{ from{opacity:0; transform:translateY(-10px);} to{opacity:1; transform:translateY(0);} }

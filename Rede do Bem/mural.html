@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mural — Rede do Bem</title>
+  <meta name="description" content="Mural de projetos — Rede do Bem. Veja detalhes, galeria e indicadores de impacto." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">🌻 Rede do Bem</div>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="navMenu" onclick="toggleMenu()">☰</button>
+      <ul id="navMenu">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="projeto.html">Projetos</a></li>
+        <li><a href="cadastro.html">Seja Voluntário</a></li>
+        <li><a href="mural.html" class="active">Mural</a></li>
+        <li><a href="voluntarios.html">Painel</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero-page">
+      <h1>Nossos Projetos no Mural</h1>
+      <p>Detalhes, galerias e indicadores de impacto.</p>
+    </section>
+
+    <section id="muralContainer" class="projects-container" aria-live="polite">
+      <!-- Conteúdo será injetado via script.js -->
+    </section>
+
+    <!-- Modal para detalhes do projeto -->
+    <div id="projectModal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+      <div class="modal-content" role="document">
+        <button class="modal-close" aria-label="Fechar" onclick="closeProjectModal()">×</button>
+        <div id="modalBody"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Rede do Bem. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

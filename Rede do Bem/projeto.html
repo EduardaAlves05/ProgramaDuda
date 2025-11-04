@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Rede do Bem — Projetos</title>
+  <meta name="description" content="Conheça os projetos da Rede do Bem: distribuição de alimentos, educação, saúde e apoio administrativo." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">🌻 Rede do Bem</div>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="navMenu" onclick="toggleMenu()">☰</button>
+      <ul id="navMenu">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="projeto.html" class="active">Projetos</a></li>
+        <li><a href="cadastro.html">Seja Voluntário</a></li>
+        <li><a href="mural.html">Mural</a></li>
+        <li><a href="voluntarios.html">Painel</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero-page" aria-labelledby="proj-title">
+      <h1 id="proj-title">Nossos Projetos</h1>
+      <p>Conheça as iniciativas e saiba como participar.</p>
+    </section>
+
+    <section class="projects-container" aria-labelledby="cards-title">
+      <h2 id="cards-title" class="visually-hidden">Lista de Projetos</h2>
+
+      <div class="project-card">
+        <img src="imagens/projeto1.png" alt="Distribuição de Alimentos" loading="lazy" />
+        <div class="card-content">
+          <h3>Distribuição de Alimentos</h3>
+          <p>Levamos alimentos saudáveis para famílias em situação de vulnerabilidade.</p>
+          <a class="btn-primary" href="mural.html#projeto-1">Saiba Mais</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="Imagens/Projeto.2.png" alt="Educação e Capacitação" loading="lazy" />
+        <div class="card-content">
+          <h3>Educação e Capacitação</h3>
+          <p>Oferecemos cursos e atividades educativas para crianças e jovens.</p>
+          <a class="btn-primary" href="mural.html#projeto-2">Saiba Mais</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="Imagens/Projeto 3.png" alt="Apoio à Saúde" loading="lazy" />
+        <div class="card-content">
+          <h3>Apoio à Saúde</h3>
+          <p>Realizamos campanhas de saúde, vacinação e acompanhamento médico.</p>
+          <a class="btn-primary" href="mural.html#projeto-3">Saiba Mais</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="Imagens/Projeto 4.png" alt="Apoio Administrativo" loading="lazy" />
+        <div class="card-content">
+          <h3>Apoio Administrativo</h3>
+          <p>Organizamos processos internos e damos suporte aos voluntários.</p>
+          <a class="btn-primary" href="mural.html#projeto-4">Saiba Mais</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Rede do Bem. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
